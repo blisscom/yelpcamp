@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YelpCamp </title>
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin>
+     <link rel="stylesheet" href="/stylesheets/home.css">
+  
+</head>
+
+<body class="d-flex text-center text-white bg-dark flex-column ">
+    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column justify-content-xxl-between">
+
+        <nav class="navbar navbar-expand-lg flex-column ">
+            <div class="container-fluid">
+              <a class="navbar-brand text-light fs-1" href="#">YelpCamp</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active text-primary fs-2" aria-current="page" href="#">Home</a>
+                  </li>
+                  <% if(!currentUser) {%> 
+                  <li class="nav-item">
+                    <a class="nav-link text-primary fs-2" href="/login">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-primary fs-2" href="/register">Register</a>
+                  </li>
+                  <% } else { %> 
+                </ul>
+                <span class="navbar-text">
+                  <a  class="nav-link text-primary fs-2"  href="/logout">Logout</a>
+                </span>
+                <% } %> 
+              </div>
+            </div>
+          </nav>
+       
+           
+       <main class=" mt-5 text-center flex-column ">
+        <h1>YelpCamp</h1>
+        <P class="lead">
+            Welcome to YelpCamp! <br> 
+            A campground pitch is a place used for overnight stay in an outdoor area, it is where an individual, 
+            family, group, or military unit can camp overnight using tents, campervans or caravans. Jump right in and explore
+            our many campgrounds. Feel free to share your own and comments.
+   
+        </P>
+
+        <a href="/campgrounds" class="btn  btn-secondary fw-bold text-light">View Campgrounds</a>
+       </main>
+
+       <footer class="mx-auto text-light fs-4 flex-column mt-5">
+        <p>&copy; 2022 </p>
+       </footer>
+
+    </div> 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                crossorigin="anonymous"></script>
+
+</body>
+
+</html>
