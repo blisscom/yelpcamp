@@ -37,22 +37,23 @@ const seedDB = async () => {
       },
       images:
         [
-          {
-            url: 'https://res.cloudinary.com/drjxhpvjs/image/upload/v1658314306/YelpCamp/jo3zkkbv7gmuds9ujapn.jpg',
-            filename: 'YelpCamp/jo3zkkbv7gmuds9ujapn'
 
+          {
+            url: 'https://res.cloudinary.com/drjxhpvjs/image/upload/v1658926958/YelpCamp/zrcffmt6qi7d2uxnboyg.jpg',
+            filename: 'YelpCamp/zrcffmt6qi7d2uxnboyg'
+           
           },
           {
-            url: 'https://res.cloudinary.com/drjxhpvjs/image/upload/v1658314306/YelpCamp/d6luq0s7xx2m5jnc1ixf.jpg',
-            filename: 'YelpCamp/d6luq0s7xx2m5jnc1ixf'
-
+            url: 'https://res.cloudinary.com/drjxhpvjs/image/upload/v1658926959/YelpCamp/ftbcvvmxqpcxy9rptgfn.jpg',
+            filename: 'YelpCamp/ftbcvvmxqpcxy9rptgfn'
+            
           },
           {
-            url: 'https://res.cloudinary.com/drjxhpvjs/image/upload/v1658314307/YelpCamp/dboysb0sh6mvozkbrpen.jpg',
-            filename: 'YelpCamp/dboysb0sh6mvozkbrpen'
-
+            url: 'https://res.cloudinary.com/drjxhpvjs/image/upload/v1658926959/YelpCamp/hucytyqg28v6gfskiet1.jpg',
+            filename: 'YelpCamp/hucytyqg28v6gfskiet1'
+            
           }
-        ]
+        ]    
 
     })
     await camp.save();

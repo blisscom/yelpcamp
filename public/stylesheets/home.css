@@ -10,15 +10,31 @@ body{
   }
 
   .container{
-    max-width: 80vh;
+    max-width: 60vh;
  }
 
-li a {
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    margin-left: 1rem;
     border-bottom: 0.25rem solid transparent;
 }
 
-li a:hover{
-    border-bottom-color: rgba(255, 255, 255, 0.5);
-    color:rgba(255, 255, 255, 0.5); 
+.nav-link:hover{
+    color: rgba(255,255,255,0.5);
+    border-bottom-color:rgba(255,255,255,0.5);
+}
+
+.nav-link.active {
+    color: white;
+    border-bottom-color:white;
+
+}
+
+.btn-secondary, .btn-secondary:hover{
+    color: #333;
+    text-shadow: none;
 }
 
