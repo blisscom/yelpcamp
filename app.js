@@ -9,16 +9,16 @@ const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const session = require('express-session');
 const flash = require('connect-flash');
-const expressError = require('./utils/expressError');
+const expresserror = require('./utils/expressError');
 const methodOverride = require('method-override');
 const passport = require('passport');
-const LocalStrategy = require('passport-local');
+const localstrategy = require('passport-local');
 const User = require('./models/user');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
-const MongoStore = require("connect-mongo")
+const mongostore = require("connect-mongo")
 const reviewRoutes = require('./routes/reviews');
 
 //const dbUrl = 'mongodb://localhost:27017/yelp-camp';
@@ -52,7 +52,7 @@ app.use(mongoSanitize({
 
 const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
 
-const store = MongoStore.create({
+const store = mongostore.create({
     //mongoUrl: dbUrl,
     mongoUrl: dbUrl,
     secret,
@@ -132,7 +132,7 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-passport.use(new LocalStrategy(User.authenticate()));
+passport.use(new localstrategy(User.authenticate()));
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
@@ -156,7 +156,7 @@ app.get('/', (req, res) => {
 
 
 app.all('*', (req, res, next) => {
-    next(new expressError('page not found', 404));
+    next(new expresserror('page not found', 404));
 })
 
 app.use((err, req, res, next) => {
