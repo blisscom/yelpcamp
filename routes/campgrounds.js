@@ -8,7 +8,6 @@ const multer = require('multer');
 const { storage } = require('../cloudinary');
 const upload = multer({ storage });
 
-//const ExpressError = require('../utils/ExpressError');
 const Campground = require('../models/campground');
 
 router.route('/')
