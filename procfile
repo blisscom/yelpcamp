@@ -1,5 +1,6 @@
 web:node app.js
 web:npm start
 web:node ./cursor/change_stream_cursor
+web:node ./utils/expresserror
 
 
