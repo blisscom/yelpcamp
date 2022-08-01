@@ -1,5 +1,5 @@
-if(process.env.NODE_ENV !== "production"){
- require('dotenv').config();
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
 };
 
 
@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const session = require('express-session');
 const flash = require('connect-flash');
-const expresserror = require('./utils/expresserror');
+const ExpressError = require('./utils/ExpressError');
 const methodOverride = require('method-override');
 const passport = require('passport');
 const localstrategy = require('passport-local');
@@ -157,7 +157,7 @@ app.get('/', (req, res) => {
 
 
 app.all('*', (req, res, next) => {
-    next(new expresserror('page not found', 404));
+    next(new ExpressError('page not found', 404));
 })
 
 app.use((err, req, res, next) => {
@@ -175,14 +175,14 @@ app.use((err, req, res, next) => {
 
 
 //mongoose.connect('mongodb://localhost:27017/yelp-camp', {
-    //httpOnly: true
-    //useNewUrlParser: true,
-    //useUnifiedTopology: true,
-    //useFindAndModify: false,
-    /*cookie:{
-        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-        maxAge: 1000 * 60 * 60 * 24 * 7
-    }*/
+//httpOnly: true
+//useNewUrlParser: true,
+//useUnifiedTopology: true,
+//useFindAndModify: false,
+/*cookie:{
+    expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+    maxAge: 1000 * 60 * 60 * 24 * 7
+}*/
 //});
 
 const port = process.env.PORT || 3000
